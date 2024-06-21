@@ -23,7 +23,12 @@ export default function Video() {
           <div className="md:hidden hidden items-center justify-between border"></div>
 
           <div className="md:h-[600px] h-screen overflow-hidden relative">
-            <div className="absolute flex right-0 top-[5%] -z-50 font-bold opacity-50 text-9xl">
+            <div
+              className="absolute flex right-0 top-[5%] -z-50 font-bold opacity-50"
+              style={{
+                fontSize: "clamp(4.5rem, 2.9rem + 8vw, 12.5rem)",
+              }}
+            >
               <h1 className="">0</h1>
               <h1 className="h-[1.65ch] overflow-hidden number">
                 <motion.span

@@ -13,7 +13,7 @@ export default function Navbar() {
     },
     {
       title: "about",
-      href: "/",
+      href: "/about",
     },
     {
       title: "features",
