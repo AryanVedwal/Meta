@@ -15,7 +15,7 @@ export default function Hero() {
         />
         <motion.img
           src="/assets/images/side.svg"
-          className=" md:block hidden absolute bottom-3 left-0 -translate-x-[15%]"
+          className=" md:block hidden absolute bottom-3 left-0 -translate-x-[15%] xl:h-[15%] lg:h-[10%] h-[8.5%]"
         />
 
         <div className=" flex flex-col justify-center gap-4 p-4 w-fit lg:mx-0 mx-auto text-center relative">
@@ -47,7 +47,7 @@ export default function Hero() {
       <div className=" lg:flex lg:flex-row-reverse items-center lg:gap-20 justify-center lg:min-h-screen lg:mt-0 mt-10 relative overflow-hidden">
         <motion.img
           src="/assets/images/side2.svg"
-          className=" md:block hidden absolute bottom-3 right-0 translate-x-[15%]"
+          className=" md:block hidden absolute bottom-3 right-0 translate-x-[15%] xl:h-[30%] lg:h-[20%] h-[15%]"
         />
         <div
           className=" border absolute top-[50%] right-0 translate-y-[50%] aspect-square h-[150px] -z-50 bg-pur"

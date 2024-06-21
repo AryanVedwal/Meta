@@ -17,6 +17,7 @@ export default function RootLayout({ children }) {
       className=" bg-db text-white"
       style={{
         lineHeight: 1,
+        scrollBehavior: "smooth",
       }}
     >
       <body className={`${inter.className}`}>

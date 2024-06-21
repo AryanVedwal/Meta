@@ -1,10 +1,13 @@
 import React from "react";
 import Link from "next/link";
-import { Discord } from "../assets/svg";
+import { Instagram, Linkedin, XT } from "../assets/svg";
 
 export default function Footer() {
   return (
-    <div className="xl:px-20 lg:px-12 md:px-8 sm:px-4 px-2 min-h-[80px] bg-zinc-900 flex items-center">
+    <div
+      id="footer"
+      className="xl:px-20 lg:px-12 md:px-8 sm:px-4 px-2 min-h-[80px] bg-zinc-900 flex items-center"
+    >
       <div className=" *:max-w-[280px] *:w-full py-12 px-8 max-w-[2560px] w-full mx-auto flex flex-wrap gap-8 justify-between content-center">
         <div className="">
           <Link href={"/"} className="t-head la">
@@ -22,9 +25,15 @@ export default function Footer() {
           <h1 className="t-head la">Social Media</h1>
 
           <div className=" flex flex-wrap gap-4">
-            <Discord size={36} fill={"#fff"} />
-            <Discord size={36} fill={"#fff"} />
-            <Discord size={36} fill={"#fff"} />
+            <Link href={"https://www.instagram.com/metabrix_labs/"}>
+              <Instagram size={32} fill={"#fff"} />
+            </Link>
+            <Link href={"https://www.linkedin.com/company/82097463/admin/dashboard/"}>
+             <Linkedin size={32} fill={"#fff"} />
+            </Link>
+            <Link href={"https://x.com/metabrixlabs/"}>
+              <XT size={32} fill={"#fff"} />
+            </Link>
           </div>
         </div>
       </div>

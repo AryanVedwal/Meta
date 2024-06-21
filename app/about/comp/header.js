@@ -56,7 +56,7 @@ export default function Header() {
           filter: "blur(800px)",
         }}
       />
-      <div className="">
+      <div className="min-w-[35%] grid place-content-center">
         <motion.img
           src="/assets/images/member.svg"
           className=" w-full max-w-[140px] md:max-w-[400px]"
@@ -82,12 +82,12 @@ export default function Header() {
             {" "}
             <span className="text-lb">Team</span> Members{" "}
           </div>
-          <div className=" hidden md:grid place-content-center grid-cols-4 gap-2 p-2">
+          <div className=" hidden md:grid place-content-center grid-cols-4 gap-2 p-2 max-w-[800px]">
             {data.map((info, i) => {
               return (
                 <div
                   key={i}
-                  className="h-[250px] rounded-xl cursor-pointer bg-[#ffffff20] grid place-content-center"
+                  className="h-[250px] rounded-xl cursor-pointer bg-[#ffffff20] grid place-content-center hover:bg-[#82ddf170] duration-200"
                   onClick={() => setSelected(i)}
                 >
                   <motion.img src="/assets/images/team.svg" />
@@ -118,7 +118,7 @@ export default function Header() {
                   <SwiperSlide key={i}>
                     <div
                       onClick={() => setSelected(i)}
-                      className="bg-[#ffffff20] h-full grid place-content-center rounded-xl"
+                      className="bg-[#ffffff20] h-full grid place-content-center rounded-xl hover:bg-[#82ddf170] duration-200"
                     >
                       <motion.img src="/assets/images/team.svg" />
                     </div>

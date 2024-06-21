@@ -2,6 +2,20 @@ import React from "react";
 import Image from "next/image";
 
 export default function Features() {
+  const data = [
+    {
+      title: "Integrate in your Platforms",
+    },
+    {
+      title: "Save Time and Costs",
+    },
+    {
+      title: "Improve User Experience",
+    },
+    {
+      title: "Easy to use API",
+    },
+  ];
   return (
     <div className="xl:p-16 lg:p-12 md:p-8 p-4 flex flex-col items-center gap-12 relative overflow-hidden">
       <div
@@ -51,22 +65,22 @@ export default function Features() {
             height={50}
           />
         </span>
-        {[...Array(4)].map((_, i) => {
+        {data.map((e, i) => {
           return (
             <div
               key={i}
-              className=" w-[300px]  h-[300px] rounded-xl bg-zinc-800 flex flex-col gap-2 p-4 *:min-h-fit"
+              className=" w-[300px]  h-[300px] rounded-xl bg-[#2B333D] flex flex-col gap-2 p-4 *:min-h-fit"
             >
-              <div className="h-full rounded-2xl bg-black grid place-content-center">
+              <div className="h-full rounded-2xl bg-[#181A1E] grid place-content-center">
                 <Image
-                  src={"/assets/images/feature1.svg"}
+                  src={`/assets/images/feature${i + 1}.svg`}
                   alt="feature"
                   width={150}
                   height={150}
                 />
               </div>
-              <p className="p-2 text-center sm-text font-extralight">
-                Integrate in your Platforms
+              <p className="p-2 text-center sm-text">
+                {e.title}
               </p>
             </div>
           );

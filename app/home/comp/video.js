@@ -13,7 +13,11 @@ export default function Video() {
   const y = useTransform(scrollYProgress, [0, 1], ["25%", "-70%"]);
   const countY = useTransform(scrollYProgress, [0.3, 1], ["0.5%", "-66%"]);
   return (
-    <div ref={container} className="h-[300vh] relative md:mt-0 mt-20 mb-10">
+    <div
+      ref={container}
+      id="features"
+      className="h-[300vh] relative md:mt-0 mt-20 mb-10"
+    >
       <div className=" h-screen sticky top-0 xl:p-16 lg:p-12 md:p-8 sm:p-4 p-2 md:flex items-center justify-center lg:min-h-screen *:w-full">
         <div className="flex flex-col gap-4">
           <h1 className="sub-head text-center la font-bold">
@@ -29,7 +33,7 @@ export default function Video() {
                 fontSize: "clamp(4.5rem, 2.9rem + 8vw, 12.5rem)",
               }}
             >
-              <h1 className="">0</h1>
+              {/* <h1 className="">0</h1> */}
               <h1 className="h-[1.65ch] overflow-hidden number">
                 <motion.span
                   style={{

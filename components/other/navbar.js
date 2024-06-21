@@ -17,11 +17,11 @@ export default function Navbar() {
     },
     {
       title: "features",
-      href: "/",
+      href: "/#features",
     },
     {
       title: "Docs",
-      href: "/",
+      href: "https://docs.ultronai.me/",
     },
     {
       title: "Pricing",
@@ -29,7 +29,7 @@ export default function Navbar() {
     },
     {
       title: "contact",
-      href: "/",
+      href: "#footer",
     },
   ];
 
@@ -58,7 +58,15 @@ export default function Navbar() {
         <div className="md:flex hidden gap-4 text-[1rem]">
           {navLinks.map((link, i) => {
             return (
-              <Link key={i} href={link.href} className=" capitalize">
+              <Link
+                key={i}
+                href={link.href}
+                className={`capitalize p-2 ${
+                  i + 1 === navLinks.length
+                    ? " bg-gradient-to-br from-lb to-yel rounded-md px-8"
+                    : ""
+                }`}
+              >
                 {link.title}
               </Link>
             );

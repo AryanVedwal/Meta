@@ -14,8 +14,8 @@ export default function Hero() {
             </p>
           </div>
           <div className="max-w-[25%] w-fit relative">
-            <div className=" border-l-4 border-b-4 h-full p-4 grid place-content-center rounded-bl-3xl">
-              <div className=" border-4  rounded-full lg:h-[50px] h-[45px] aspect-square" />
+            <div className=" border-l-4 border-b-4 h-full pt-0 p-4 grid place-content-center rounded-bl-[35px]">
+              <div className=" border-4  rounded-full lg:h-[75px] h-[50px] aspect-square" />
             </div>
           </div>
         </div>

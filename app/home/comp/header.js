@@ -26,7 +26,8 @@ export default function Header() {
       }}
       className="lg:flex justify-between items-center xl:px-20 lg:px-12 md:px-8 sm:p-4 p-2 max-w-[1660px] mx-auto"
     >
-      <div className="flex flex-col justify-center gap-4 lg:p-4 sm:px-12 px-6 lg:w-fit w-full lg:mx-0 mx-auto sm:min-h-fit min-h-screen">
+      <div className="flex flex-col justify-center gap-4 lg:p-4 sm:px-12 px-2 py-2 lg:w-fit w-full lg:mx-0 mx-auto sm:min-h-fit min-h-screen relative overflow-hidden">
+        <div className="md:hidden flex border-2 absolute top-0 right-0 h-[25%] aspect-square rounded-full translate-x-[50%]"/>
         <motion.h1
           variants={container}
           initial="hidden"
@@ -38,7 +39,7 @@ export default function Header() {
           style={{
             lineHeight: 0.9,
           }}
-          className="main-head font-bold la bg-clip-text text-transparent bg-gradient-to-br from-lb to-yel font uppercase"
+          className="main-head font-bold la bg-clip-text text-transparent bg-gradient-to-br from-lb to-yel uppercase"
         >
           Super <br /> Charge
         </motion.h1>
@@ -76,8 +77,8 @@ export default function Header() {
                 </p>
               </div>
               <div className="max-w-[25%] w-fit relative">
-                <div className=" border-l-4 border-b-4 h-full p-4 grid place-content-center rounded-bl-3xl">
-                  <div className=" border-4  rounded-full lg:h-[50px] h-[45px] aspect-square" />
+                <div className=" border-l-4 border-b-4 h-full pt-0 p-4 grid place-content-center rounded-bl-[35px]">
+                  <div className=" border-4  rounded-full lg:h-[75px] h-[50px] aspect-square" />
                 </div>
               </div>
             </div>

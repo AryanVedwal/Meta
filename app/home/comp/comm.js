@@ -1,15 +1,31 @@
 "use client";
 import { Discord } from "@/components/assets/svg";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import React from "react";
 
 export default function Comm() {
   const Tools = [
-    "DISCORD",
-    "ZIMENSIONS 3D",
-    "UNITY",
-    "UNREAL ENGINE",
-    "BLENDER",
+    {
+      name: "DISCORD",
+      link: "https://discord.gg/zmE8XH6A",
+    },
+    {
+      name: "ZIMENSIONS 3D",
+      link: "https://app.zimension3d.com/",
+    },
+    {
+      name: "UNITY",
+      link: "https://docs.ultronai.me/unity",
+    },
+    {
+      name: "UNREAL ENGINE",
+      link: "https://www.unrealengine.com/en-US/download",
+    },
+    {
+      name: "BLENDER",
+      link: "https://www.blender.org/download/",
+    },
   ];
 
   return (
@@ -49,19 +65,20 @@ export default function Comm() {
       <div className="mt-20 flex flex-wrap justify-center gap-4 content-center">
         {Tools.map((tool, i) => {
           return (
-            <div
-              key={i}
-              className="w-[200px] min-h-[110px] rounded-xl bg-zinc-900 flex flex-col gap-3 items-center justify-center"
-              style={{
-                boxShadow: "0.5rem 0.5rem 0.1rem #000",
-              }}
-            >
-              <motion.img
-                src={`/assets/logos/${tool}.svg`}
-                className="h-[50px]"
-              />
-              <sub className="text-center">{tool}</sub>
-            </div>
+            <Link target="_blank" noopener="true" noreferrer="true" href={tool.link} key={i}>
+              <div
+                className="w-[200px] min-h-[110px] rounded-xl bg-[#2B333D] flex flex-col gap-3 items-center justify-center"
+                style={{
+                  boxShadow: "0.5rem 0.5rem 0.1rem #000",
+                }}
+              >
+                <motion.img
+                  src={`/assets/logos/${tool.name}.svg`}
+                  className="h-[50px]"
+                />
+                <sub className="text-center">{tool.name}</sub>
+              </div>
+            </Link>
           );
         })}
       </div>
@@ -76,7 +93,7 @@ export default function Comm() {
           return (
             <div
               key={i}
-              className="max-w-[350px] w-full min-h-[125px] rounded-xl bg-zinc-900 flex items-center justify-center"
+              className="max-w-[350px] w-full min-h-[125px] rounded-xl bg-[#2B333D] flex items-center justify-center"
               style={{
                 boxShadow: "0.5rem 0.5rem 0.1rem #000",
               }}
