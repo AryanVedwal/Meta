@@ -50,6 +50,10 @@ export default function Header() {
         minHeight: "calc(100vh - 80px)",
       }}
     >
+      <motion.img
+        src="/assets/images/side2.svg"
+        className=" md:block hidden absolute top-3 right-0 translate-x-[15%] xl:h-[30%] lg:h-[20%] h-[15%]"
+      />
       <div
         className="aspect-square h-[80%] absolute bg-pur -z-50"
         style={{
