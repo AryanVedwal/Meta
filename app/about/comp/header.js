@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Discord } from "@/components/assets/svg";
+import { Linkedin } from "@/components/assets/svg";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
@@ -42,6 +42,14 @@ export default function Header() {
       name: "Kayleigh Schulist",
       role: "Moen, Upton and Cartwright",
     },
+    {
+      name: "Name 9",
+      role: "Moen, Upton and Cartwright",
+    },
+    {
+      name: "name 10",
+      role: "Moen, Upton and Cartwright",
+    },
   ];
   return (
     <div
@@ -73,8 +81,8 @@ export default function Header() {
             <h1 className=" t-head"> {data[selected].name} </h1>
             <h1 className=" sub-head"> {data[selected].role} </h1>
           </div>
-          <div>
-            <Discord size={64} fill={"#fff"} />
+          <div className="border rounded-md">
+            <Linkedin size={44} fill={"#fff"} />
           </div>
         </div>
 
@@ -86,7 +94,7 @@ export default function Header() {
             {" "}
             <span className="text-lb">Team</span> Members{" "}
           </div>
-          <div className=" hidden md:grid place-content-center grid-cols-4 gap-2 p-2 max-w-[800px]">
+          <div className=" hidden md:grid place-content-center grid-cols-5 gap-2 p-2 max-w-[900px]">
             {data.map((info, i) => {
               return (
                 <div
