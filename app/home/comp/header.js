@@ -67,7 +67,8 @@ export default function Header() {
         >
           <div className="rounded-3xl flex flex-col w-full">
             <div className="flex relative">
-              <div className=" w-full flex items-center h-full border-t-4 pt-[40px] px-6 border-l-4 rounded-tl-3xl relative">
+              <div className=" w-full flex items-center h-full border-t-4 border-l-4 pt-[40px] px-6 rounded-tl-3xl relative">
+                <div className="border-l-4 absolute top-[100%] -left-1 h-[20px]"></div>
                 <Corner />
                 <p className=" max-w-[320px] sm:px-4 sm-text">
                   Generate ready to use avatars within minutes for your games,

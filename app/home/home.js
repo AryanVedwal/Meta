@@ -6,6 +6,7 @@ import Features from "./comp/features";
 import Comm from "./comp/comm";
 import Get from "./comp/get";
 import Custom from "./comp/custom";
+import Feedback from "./comp/feedback";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Video />
       <Features />
       <Comm />
+      <Feedback />
       <Get />
     </div>
   );

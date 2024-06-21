@@ -1,0 +1,18 @@
+.feedback-loop {
+  --gap: 20px;
+  gap: var(--gap);
+  user-select: none;
+  flex-shrink: 0;
+
+  animation: scroll 50s linear infinite;
+}
+
+.feedback-main:hover .feedback-loop {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
