@@ -10,7 +10,7 @@ export default function Video() {
     offset: ["0 0", "1 1"],
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], ["25%", "-70%"]);
+  const y = useTransform(scrollYProgress, [0, 1], ["5%", "-70%"]);
   const countY = useTransform(scrollYProgress, [0.3, 1], ["0.5%", "-66%"]);
   return (
     <div
@@ -80,8 +80,8 @@ export default function Video() {
 }
 
 const Slide = ({ i, progress }) => {
-  const start = i / 3;
-  const end = 1 / 3 + start - 0.1;
+  const start = (i - 1) / 3;
+  const end = i / 3 + start / 2;
   const scale = useTransform(progress, [start, end], [0.7, 1]);
   const opacity = useTransform(progress, [start, end], [0.2, 1]);
   const textOpacity = useTransform(progress, [start, end], [0, 1]);

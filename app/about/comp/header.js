@@ -78,11 +78,11 @@ export default function Header() {
       <div className="max-w-[1440px] w-full flex md:flex-col flex-col-reverse gap-2">
         <div className="border-b flex items-center justify-between gap-8 max-w-[640px] w-full md:mx-0 mx-auto p-4">
           <div className=" flex flex-col gap-2">
-            <h1 className=" t-head"> {data[selected].name} </h1>
+            <h1 className=" t-head font-bold"> {data[selected].name} </h1>
             <h1 className=" sub-head"> {data[selected].role} </h1>
           </div>
-          <div className="border rounded-md">
-            <Linkedin size={44} fill={"#fff"} />
+          <div className="border rounded-md p-1">
+            <Linkedin size={36} fill={"#fff"} />
           </div>
         </div>
 
