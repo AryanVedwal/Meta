@@ -78,8 +78,8 @@ export default function Header() {
       <div className="max-w-[1440px] w-full flex md:flex-col flex-col-reverse gap-2">
         <div className="border-b flex items-center justify-between gap-8 max-w-[640px] w-full md:mx-0 mx-auto p-4">
           <div className=" flex flex-col gap-2">
-            <h1 className=" t-head font-bold"> {data[selected].name} </h1>
-            <h1 className=" sub-head"> {data[selected].role} </h1>
+            <h1 className=" font-bold lg:text-4xl"> {data[selected].name} </h1>
+            <h1 className="font-normal lg:text-lg"> {data[selected].role} </h1>
           </div>
           <div className="border rounded-md p-1">
             <Linkedin size={36} fill={"#fff"} />
@@ -94,15 +94,15 @@ export default function Header() {
             {" "}
             <span className="text-lb">Team</span> Members{" "}
           </div>
-          <div className=" hidden md:grid place-content-center grid-cols-5 gap-2 p-2 max-w-[900px]">
+          <div className=" hidden md:grid place-content-center grid-cols-5 gap-2 px-2 max-w-[900px]">
             {data.map((info, i) => {
               return (
                 <div
                   key={i}
-                  className="h-[250px] rounded-xl cursor-pointer bg-[#ffffff20] grid place-content-center hover:bg-[#82ddf170] duration-200"
+                  className="h-auto rounded-xl border border-[#00FFFF] cursor-pointer bg-[#ffffff20] grid place-content-center hover:bg-cyan-500 duration-200"
                   onClick={() => setSelected(i)}
                 >
-                  <motion.img src="/assets/images/team.svg" />
+                  <motion.img src="/assets/images/team.svg" className="h-[230px]" />
                 </div>
               );
             })}
