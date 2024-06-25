@@ -9,7 +9,7 @@ module.exports = {
     extend: {
       colors: {
         db: "#08111C",
-        lb: "#66C4D9",
+        lb: "#00FFFF",
         yel: "#FFC107",
         pur: "#522DB9",
       },

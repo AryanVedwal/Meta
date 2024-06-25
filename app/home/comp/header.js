@@ -18,9 +18,9 @@ export default function Header() {
       style={{
         minHeight: "calc(100vh - 80px)",
       }}
-      className="lg:flex justify-between items-center xl:px-20 lg:px-12 md:px-8 sm:p-4 p-2 max-w-[1660px] mx-auto"
+      className="lg:flex justify-between items-center xl:px-20 lg:px-12 md:px-8 sm:p-4 p-0 max-w-[1660px] mx-auto"
     >
-      <div className="flex flex-col justify-center gap-4 lg:p-4 sm:px-12 px-2 py-2 lg:w-fit w-full lg:mx-0 mx-auto sm:min-h-fit min-h-screen relative overflow-hidden">
+      <div className="flex flex-col justify-center gap-4 lg:p-4 sm:px-12 px-4 py-2 lg:w-fit w-full lg:mx-0 mx-auto sm:min-h-fit min-h-[640px] relative overflow-hidden">
         <motion.div
           initial={{
             opacity: 1,
@@ -36,7 +36,7 @@ export default function Header() {
             delay: 1.5,
             duration: 0.25,
           }}
-          className="md:hidden flex border-2 absolute top-10 right-0 h-[75px] aspect-square rounded-full"
+          className="md:hidden flex border-2 absolute top-20 right-0 h-[75px] aspect-square rounded-full"
         />
         <motion.h1
           variants={container}
@@ -63,11 +63,14 @@ export default function Header() {
             duration: 0.25,
           }}
           className="sub-head md:pl-[12px] pl-[8px] mb-2 la font-semibold max-w-[640px]"
+          style={{
+            letterSpacing: 1,
+          }}
         >
           Your 3D Character creation with AI
         </motion.h5>
 
-        <motion.div
+        {/* <motion.div
           variants={container}
           initial="hidden"
           animate="visible"
@@ -101,6 +104,54 @@ export default function Header() {
               </Link>
               <Link href={"https://discord.gg/zmE8XH6A"} target="_blank">
                 <p className=" border-4 py-4 cursor-pointer rounded-xl text">
+                  Join Discord Community
+                </p>
+              </Link>
+            </div>
+          </div>
+        </motion.div> */}
+
+        <motion.div
+          variants={container}
+          initial="hidden"
+          animate="visible"
+          transition={{
+            delay: 1,
+            duration: 0.25,
+          }}
+          className="relative max-w-[520px] max-h-[319px]"
+        >
+          <motion.img src="/assets/images/back.svg" className="" />
+          <div className="absolute inset-0 h-full w-full flex flex-col justify-center md:gap-4 gap-1 *:h-fit">
+            <div className="max-w-[80%] flex items-center px-[5%] py-2">
+              <p
+                className="p-2 lg:leading-6 sm:leading-5 leading-4"
+                style={{
+                  fontSize: "clamp(0.8125rem, 0.6875rem + 0.4167vw, 1.0625rem)",
+                }}
+              >
+                Generate ready to use avatars within minutes for your games, XR
+                and marketing needs
+              </p>
+            </div>
+            <div className="text-center flex flex-col items-center justify-start *:max-h-[50%] *:h-fit gap-2 py-2 *:max-w-[90%] *:w-full">
+              <Link href={"https://ultronai.me/"} target="_blank">
+                <p
+                  className=" py-4 cursor-pointer bg-[#8e8e8e63] font-bold rounded-xl uppercase text"
+                  style={{
+                    fontSize: "clamp(0.875rem, 0.8125rem + 0.2083vw, 1rem)",
+                  }}
+                >
+                  TRY ULTRON AI FOR FREE
+                </p>
+              </Link>
+              <Link href={"https://discord.gg/zmE8XH6A"} target="_blank">
+                <p
+                  className=" border-4 py-4 cursor-pointer rounded-xl text"
+                  style={{
+                    fontSize: "clamp(0.875rem, 0.8125rem + 0.2083vw, 1rem)",
+                  }}
+                >
                   Join Discord Community
                 </p>
               </Link>

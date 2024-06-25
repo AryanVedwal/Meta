@@ -13,8 +13,18 @@ export default function Custom() {
         className=" flex items-center gap-1 t-head relative pt-10 pb-8 px-4 la"
         style={{ lineHeight: 0 }}
       >
-        <span className=" absolute border-t top-0 left-0 max-w-[75%] w-[30ch]" />
-        <span className=" absolute border-b bottom-0 left-0 max-w-[55%] w-[25ch]" />
+        <span
+          className=" absolute border-t top-0 left-0 max-w-[75%] w-[30ch]"
+          style={{
+            clipPath: "polygon(100% 0, 90% 50%, 80% 100%, 0 100%, 0 0)",
+          }}
+        />
+        <span
+          className=" absolute border-b bottom-0 left-0 max-w-[55%] w-[25ch]"
+          style={{
+            clipPath: "polygon(80% 0, 90% 50%, 100% 100%, 0 100%, 0 0)",
+          }}
+        />
         <span className="pr-[0.5ch]  h-full"> Easy</span>
         <span className=" text-lb h-full">Customization</span>
       </div>
@@ -41,7 +51,7 @@ export default function Custom() {
                   className=" mb-2 md:h-[250px] h-[150px] rounded-xl bg-[#ffffff10] hover:bg-cyan-500 duration-300 cursor-pointer grid place-content-center"
                   onClick={() => setBody(i)}
                 >
-                  {i + 1}
+                  <motion.img src={`/assets/outfit/BS1.png`} />
                 </div>
               );
             })}

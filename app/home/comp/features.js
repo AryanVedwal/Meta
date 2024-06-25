@@ -18,7 +18,7 @@ export default function Features() {
       id="features"
       className="h-[300vh] relative md:mt-0 mt-20 mb-10"
     >
-      <div className=" h-screen sticky top-0 xl:p-16 lg:p-12 md:p-8 sm:p-4 p-2 md:flex items-center justify-center lg:min-h-screen *:w-full">
+      <div className=" h-screen sticky top-0 xl:p-16 lg:p-12 md:p-8 sm:p-4 p-4 md:flex items-center justify-center lg:min-h-screen *:w-full">
         <div className="flex flex-col gap-4">
           <h1 className="sub-head text-center la font-bold">
             Generate ready to use <span className="text-lb">3D characters</span>
