@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import { Instagram, Linkedin, XT } from "../assets/svg";
+import { Email, Instagram, Linkedin, Web, XT } from "../assets/svg";
 import { motion } from "framer-motion";
 
 export default function Footer() {
@@ -16,7 +16,7 @@ export default function Footer() {
         }}
         transition={{
           duration: 0.1,
-          delay: 5.5,
+          // delay: 5.5,
         }}
         id="footer"
         className="xl:px-20 lg:px-12 md:px-8 sm:px-4 px-2 py-20 min-h-[80px] bg-gray-900 flex items-center"
@@ -33,8 +33,23 @@ export default function Footer() {
           </div>
           <div className=" flex flex-col gap-2">
             <h1 className="t-head la">Contact Us</h1>
-            <p className=" text">info@metabrixlab.com</p>
-            <p className=" text">www.metabrixlab.com</p>
+            <Link
+              href={"mailto:info@metabrixlab.com"}
+              target="_blank"
+              className="flex items-center gap-2"
+            >
+              <Email size={24} fill={"#fff"} />
+
+              <p className=" text">info@metabrixlab.com</p>
+            </Link>
+            <Link
+              href={"https://www.metabrixlab.com"}
+              target="_blank"
+              className="flex items-center gap-2"
+            >
+              <Web size={24} fill={"#fff"} />
+              <p className=" text">www.metabrixlab.com</p>
+            </Link>
           </div>
           <div className=" flex flex-col gap-4">
             <h1 className="t-head la">Social Media</h1>
