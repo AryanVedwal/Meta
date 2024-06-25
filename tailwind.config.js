@@ -13,6 +13,7 @@ module.exports = {
         yel: "#FFC107",
         pur: "#522DB9",
       },
+      
     },
   },
   plugins: [],

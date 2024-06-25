@@ -1,18 +1,28 @@
-.feedback-loop {
-  --gap: 20px;
-  gap: var(--gap);
-  user-select: none;
-  flex-shrink: 0;
 
-  animation: scroll 50s linear infinite;
-}
+@media only screen and (min-width: 850px) {
 
-.feedback-main:hover .feedback-loop {
-  animation-play-state: paused;
-}
-
-@keyframes scroll {
-  to {
-    transform: translateX(calc(-100% - var(--gap)));
+  .feedback-main {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .feedback-loop {
+    display: flex;
+    width: calc(200% + 20px); /* Adjust width to accommodate 20px gap */
+    animation: feedback-scroll 30s linear infinite;
+  }
+  
+  .feedback-loop > div {
+    flex: 0 0 auto;
+  }
+  
+  @keyframes feedback-scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
   }
 }

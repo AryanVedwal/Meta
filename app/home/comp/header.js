@@ -137,7 +137,7 @@ export default function Header() {
             <div className="text-center flex flex-col items-center justify-start *:max-h-[50%] *:h-fit gap-2 py-2 *:max-w-[90%] *:w-full">
               <Link href={"https://ultronai.me/"} target="_blank">
                 <p
-                  className=" py-4 cursor-pointer bg-[#8e8e8e63] font-bold rounded-xl uppercase text"
+                  className=" lg:py-5 py-3 cursor-pointer bg-[#8e8e8e63] font-bold rounded-xl uppercase text inner-shadow-mbrix"
                   style={{
                     fontSize: "clamp(0.875rem, 0.8125rem + 0.2083vw, 1rem)",
                   }}
@@ -159,7 +159,7 @@ export default function Header() {
           </div>
         </motion.div>
       </div>
-      <div className=" p-4 flex items-center justify-center lg:w-fit w-full sm:mx-0 mx-auto">
+      <div className="relative p-4 flex items-center justify-center lg:w-fit w-full sm:mx-0 mx-auto">
         <motion.img
           initial={{
             opacity: 0,
@@ -171,9 +171,10 @@ export default function Header() {
             duration: 0.2,
             delay: 0.5,
           }}
-          src="/assets/images/header.svg"
+          src="/assets/images/header.png"
           className=" lg:max-w-[600px] max-w-[400px] w-full "
         />
+  
       </div>
     </div>
   );

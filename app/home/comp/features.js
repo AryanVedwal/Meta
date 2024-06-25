@@ -4,13 +4,13 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 const video = [
   {
-    link: "https://cdn.pixabay.com/video/2024/05/25/213616_large.mp4",
+    link: "https://dmh29xnc6sm1d.cloudfront.net/Images/website/Img-to-3D.mp4",
   },
   {
-    link: "https://cdn.pixabay.com/video/2023/03/09/153976-817104245_large.mp4",
+    link: "https://dmh29xnc6sm1d.cloudfront.net/Images/website/Conversational_Render.mp4",
   },
   {
-    link: "https://cdn.pixabay.com/video/2024/02/24/201766-916357972_large.mp4",
+    link: "https://dmh29xnc6sm1d.cloudfront.net/Images/website/Text-to-3D.mp4",
   },
 ];
 
@@ -131,7 +131,7 @@ const Slide = ({ i, progress, isActive }) => {
       className="w-full h-[400px] flex pl-0 p-4 items-center gap-2"
     >
       <motion.div
-        className="py-4 text h-fit w-fit flex items-center justify-center rotate-180"
+        className="italic py-4 text-sm h-fit w-fit flex items-center justify-center rotate-180"
         style={{
           writingMode: "vertical-rl",
           opacity: textOpacity,

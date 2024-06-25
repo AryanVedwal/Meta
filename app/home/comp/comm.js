@@ -1,8 +1,10 @@
 "use client";
 import { Discord } from "@/components/assets/svg";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import Avatar from "@/public/assets/logos/user.png"
 
 export default function Comm() {
   const Tools = [
@@ -30,8 +32,8 @@ export default function Comm() {
 
   return (
     <div className="xl:p-16 lg:p-12 md:p-8 p-4 md:mt-0 mt-12 ">
-      <div className=" flex items-center justify-evenly">
-        <div className=" flex sm:flex-row flex-col items-center justify-center sm:text-start text-center gap-1">
+      <div className="w-full max-w-full md:max-w-4xl mx-auto grid sm:grid-cols-2 grid-cols-1 gap-8 items-center justify-center">
+        <div className="flex sm:flex-row flex-col items-center justify-center sm:text-start text-center gap-1">
           <Discord size={64} fill={"#fff"} />
           <h5
             className="text-sm sub-head"
@@ -45,15 +47,15 @@ export default function Comm() {
         </div>
 
         <div className=" flex sm:flex-row flex-col items-center justify-center sm:text-start text-center gap-1">
-          <Discord size={64} fill={"#fff"} />
+          <Image src={Avatar} className="w-auto h-16" alt="8000+ Avatars Generated" />
           <h5
             className="text-sm sub-head"
             style={{
               lineHeight: 1.1,
             }}
           >
-            600+ <br />
-            Discord Members
+            8000+ <br />
+            Avatar Generations
           </h5>
         </div>
       </div>
@@ -62,12 +64,12 @@ export default function Comm() {
         Try UltronAI on these platforms
       </h5>
 
-      <div className="mt-20 flex flex-wrap justify-center gap-4 content-center">
+      <div className="mt-10 w-full flex flex-wrap justify-center md:space-x-16 gap-4 mx-auto content-center">
         {Tools.map((tool, i) => {
           return (
             <Link target="_blank" noopener="true" noreferrer="true" href={tool.link} key={i}>
               <div
-                className="w-[200px] min-h-[110px] rounded-xl bg-[#2B333D] flex flex-col gap-3 items-center justify-center"
+                className="w-full min-w-36 h-auto px-4 py-10 rounded-xl bg-[#2B333D] flex flex-col gap-3 items-center justify-center"
                 style={{
                   boxShadow: "0.5rem 0.5rem 0.1rem #000",
                 }}

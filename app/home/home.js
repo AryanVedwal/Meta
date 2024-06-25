@@ -10,7 +10,7 @@ import Benefits from "./comp/benefits";
 
 export default function Home() {
   return (
-    <div className="">
+    <div className="px-2">
       <Header />
       <Custom />
       <Hero />

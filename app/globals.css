@@ -38,3 +38,18 @@
 .sm-text {
   font-size: clamp(0.6875rem, 0.625rem + 0.3125vw, 1rem);
 }
+
+
+/* CSS Inner Shadow Code */
+.inner-shadow-mbrix {
+  box-shadow: inset cyan 0px 0px 40px -12px; 
+}
+.inner-shadow-mbrix-md {
+  box-shadow: inset cyan 0px 0px 20px -6px; 
+}
+.bg-gradient-one{
+  background: (135deg, #08111C 35%, #8466D9 24.85%, #08111C 35%);
+}
+.bg-gradient-two{
+  background:linear-gradient(135deg, #08111C 50%, #8466D9 50%, #08111C 50%);
+}

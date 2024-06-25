@@ -38,7 +38,7 @@ const Loader = () => (
         d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
       ></path>
     </svg>
-    Processing...
+    Sending your request...
   </span>
 );
 
@@ -104,7 +104,7 @@ export default function Get() {
   };
 
   return (
-    <div className="xl:p-16 lg:p-12 md:p-8 p-4 sm:flex justify-evenly sm:w-full w-fit sm:mx-0 mx-auto mt-20">
+    <div className="xl:p-16 lg:p-12 md:p-8 px-12 sm:flex justify-evenly sm:w-full w-fit sm:mx-0 mx-auto mt-20">
       {/* Contact Information */}
       <div className="sm:text-start text-center">
         <h3 className="font-bold s-head -ml-1 la">
@@ -189,13 +189,13 @@ export default function Get() {
                   </div>
                 </div>
               </div>
-              <div className="absolute z-50 top-1 right-1 ">
+              <div className="mt-4">
                 <button
                   type="button"
-                  className="aspect-square h-[30px] inline-flex items-center justify-center rounded-full text-sm font-semibold text-slate-300 shadow-sm"
+                  className=" w-full aspect-square h-[30px] inline-flex items-center justify-center font-semibold text-slate-300 shadow-sm"
                   onClick={() => setPopupOpen(false)}
                 >
-                  x
+                  <span className="border border-slate-500 px-4 py-1.5 rounded-lg text-sm">Close</span>
                 </button>
               </div>
             </DialogPanel>

@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <div className="">
       {/* Hero 1 */}
-      <div className=" lg:flex items-center lg:gap-20 justify-center xl:min-h-fit min-h-screen xl:mt-40 xl:py-16 mt-10 relative overflow-hidden">
+      <div className=" lg:flex items-center lg:gap-20 justify-center xl:min-h-fit min-h-full xl:mt-40 xl:py-16 mt-10 relative overflow-hidden">
       <div
           className=" border absolute top-[50%] left-0 translate-y-[50%] aspect-square h-[150px] -z-50 bg-pur"
           style={{

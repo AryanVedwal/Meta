@@ -17,7 +17,7 @@ export default function Benefits() {
     },
   ];
   return (
-    <div className="xl:p-16 lg:p-12 md:p-8 p-4 flex flex-col items-center gap-12 relative overflow-hidden">
+    <div className="xl:px-16 lg:px-12 md:px-8 px-4 flex flex-col items-center gap-12 relative overflow-hidden">
       <div
         className="absolute top-10 left-0 translate-y-[50%] aspect-square h-[150px] -z-50 bg-pur"
         style={{
@@ -31,7 +31,7 @@ export default function Benefits() {
         }}
       />
       <div className="text-center">
-        <h2 className=" font-bold s-head la  relative">
+        <h2 className="font-bold text-4xl la  relative px-4">
           <span className="flex absolute top-0 -right-40">
             <Image
               src={"/assets/images/hamburger.svg"}
@@ -42,7 +42,7 @@ export default function Benefits() {
           </span>
           Developer <span className="text-lb">Friendly</span>
         </h2>
-        <p className="max-w-[640px] mt-6 mx-auto para text">
+        <p className="max-w-[640px] mt-6 mx-auto para text px-4">
           We provide an easy API and SDK integration kit with lightning speed
           Avatar creation for your platform.
         </p>
