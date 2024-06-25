@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <div className="">
       {/* Hero 1 */}
-      <div className=" lg:flex items-center lg:gap-20 justify-center lg:min-h-screen lg:mt-0 mt-10 relative overflow-hidden">
+      <div className=" lg:flex items-center lg:gap-20 justify-center xl:min-h-fit min-h-screen xl:mt-40 xl:py-16 mt-10 relative overflow-hidden">
       <div
           className=" border absolute top-[50%] left-0 translate-y-[50%] aspect-square h-[150px] -z-50 bg-pur"
           style={{
@@ -44,7 +44,7 @@ export default function Hero() {
       {/* Hero 1 */}
 
       {/* Hero 2 */}
-      <div className=" lg:flex lg:flex-row-reverse items-center lg:gap-20 justify-center lg:min-h-screen lg:mt-0 mt-10 relative overflow-hidden">
+      <div className=" lg:flex lg:flex-row-reverse items-center lg:gap-20 justify-center xl:min-h-fit min-h-screen xl:mt-40 xl:py-16 mt-10 relative overflow-hidden">
         <motion.img
           src="/assets/images/side2.svg"
           className=" md:block hidden absolute bottom-3 right-0 translate-x-[15%] xl:h-[30%] lg:h-[20%] h-[15%]"

@@ -6,49 +6,62 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
 import "swiper/css/pagination";
+import Link from "next/link";
 
 export default function Header() {
+  // use index from api to change the dress & body structure
+
   const [selected, setSelected] = useState(0);
   const data = [
     {
       name: "Doris Runte",
       role: "Turcotte LLC",
+      link: "/link",
     },
     {
       name: "Mr. Darwin Runolfsdottir",
       role: "Gottlieb - Morar",
+      link: "/link",
     },
     {
       name: "Weldon Daniel",
       role: "Murphy LLC",
+      link: "/link",
     },
     {
       name: "Camila Volkman",
       role: "Mohr, Ortiz and Harvey",
+      link: "/link",
     },
     {
       name: "Lilliana Daugherty",
       role: "VonRueden Inc",
+      link: "/link",
     },
     {
       name: "Abigail Roberts",
       role: "Mosciski - Leffler",
+      link: "/link",
     },
     {
       name: "Dr. Gerardo Mohr",
       role: "Hettinger - Krajcik",
+      link: "/link",
     },
     {
       name: "Kayleigh Schulist",
       role: "Moen, Upton and Cartwright",
+      link: "/link",
     },
     {
       name: "Name 9",
       role: "Moen, Upton and Cartwright",
+      link: "/link",
     },
     {
       name: "name 10",
       role: "Moen, Upton and Cartwright",
+      link: "/link",
     },
   ];
   return (
@@ -68,7 +81,12 @@ export default function Header() {
           filter: "blur(800px)",
         }}
       />
-      <div className="min-w-[35%] grid place-content-center">
+      <div className="min-w-[35%] grid place-content-center relative">
+        {/* api Based data */}
+        <div className=" border absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] bg-white p-2 text-black *:my-2">
+          image {selected}
+        </div>
+        {/* api Based data */}
         <motion.img
           src="/assets/images/member.svg"
           className=" w-full max-w-[140px] md:max-w-[400px]"
@@ -81,9 +99,9 @@ export default function Header() {
             <h1 className=" font-bold lg:text-4xl"> {data[selected].name} </h1>
             <h1 className="font-normal lg:text-lg"> {data[selected].role} </h1>
           </div>
-          <div className="border rounded-md p-1">
+          <Link href={data[selected].link} className="border rounded-md p-1">
             <Linkedin size={36} fill={"#fff"} />
-          </div>
+          </Link>
         </div>
 
         <div className="">
@@ -102,7 +120,10 @@ export default function Header() {
                   className="h-auto rounded-xl border border-[#00FFFF] cursor-pointer bg-[#ffffff20] grid place-content-center hover:bg-cyan-500 duration-200"
                   onClick={() => setSelected(i)}
                 >
-                  <motion.img src="/assets/images/team.svg" className="h-[230px]" />
+                  <motion.img
+                    src="/assets/images/team.svg"
+                    className="h-[230px]"
+                  />
                 </div>
               );
             })}

@@ -25,19 +25,57 @@ const VideoPlayer = ({ src }) => {
   }, []);
 
   return (
-    <div className=" h-full w-full">
-      <motion.video
-        ref={videoRef}
-        src={src}
-        className=" h-full w-full object-cover rounded-full"
-        playsInline
-        autoPlay
-        muted
-        style={{
-          transformOrigin: "right",
+    <motion.div
+      initial={{
+        opacity: 1,
+      }}
+      animate={{
+        opacity: 0,
+      }}
+      transition={{
+        delay: 5.25,
+        duration: 0.25,
+      }}
+      className=""
+      style={{
+        height: "calc(100vh - 80px)",
+      }}
+    >
+      <motion.div
+        initial={{
+          x: "-150%",
+          y: "50%",
+          scale: 10,
+          // opacity: 1,
         }}
-      />
-    </div>
+        animate={{
+          x: "-50%",
+          y: "50%",
+          scale: 1,
+          // opacity: 0,
+        }}
+        transition={{
+          duration: 5,
+          delay: 0.5,
+          type: "tween",
+        }}
+        className=" fixed top-0 right-0 h-[500px] w-[500px] translate-y-[50%] rounded-full z-50 overflow-hidden"
+      >
+        <motion.video
+          ref={videoRef}
+          src={src}
+          className=" h-full w-full object-cover"
+          playsInline
+          autoPlay
+          muted
+          style={
+            {
+              // transformOrigin: "right",
+            }
+          }
+        />
+      </motion.div>
+    </motion.div>
   );
 };
 

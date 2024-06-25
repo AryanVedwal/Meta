@@ -12,13 +12,6 @@ export default function Header() {
     },
   };
 
-  const item = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-    },
-  };
   return (
     <div
       style={{
@@ -27,7 +20,23 @@ export default function Header() {
       className="lg:flex justify-between items-center xl:px-20 lg:px-12 md:px-8 sm:p-4 p-2 max-w-[1660px] mx-auto"
     >
       <div className="flex flex-col justify-center gap-4 lg:p-4 sm:px-12 px-2 py-2 lg:w-fit w-full lg:mx-0 mx-auto sm:min-h-fit min-h-screen relative overflow-hidden">
-        <div className="md:hidden flex border-2 absolute top-0 right-0 h-[25%] aspect-square rounded-full translate-x-[50%]"/>
+        <motion.div
+          initial={{
+            opacity: 1,
+            scale: 0,
+            x: "50%",
+          }}
+          animate={{
+            opacity: 1,
+            scale: 1,
+            x: "50%",
+          }}
+          transition={{
+            delay: 1.5,
+            duration: 0.25,
+          }}
+          className="md:hidden flex border-2 absolute top-10 right-0 h-[75px] aspect-square rounded-full"
+        />
         <motion.h1
           variants={container}
           initial="hidden"

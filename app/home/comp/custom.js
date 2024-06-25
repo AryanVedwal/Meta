@@ -1,10 +1,14 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 
 export default function Custom() {
+  // use index from api to change the dress & body structure
+  const [body, setBody] = useState(0);
+  const [dress, setDress] = useState(0);
+
   return (
-    <div className="sm:min-h-screen py-8 flex flex-col gap-4">
+    <div className="sm:min-h-fit min-h-screen py-8 flex flex-col gap-4">
       <div
         className=" flex items-center gap-1 t-head relative pt-10 pb-8 px-4 la"
         style={{ lineHeight: 0 }}
@@ -15,7 +19,13 @@ export default function Custom() {
         <span className=" text-lb h-full">Customization</span>
       </div>
       <div className=" relative">
-        <div className=" sm:p-8 p-2 md:max-w-[1200px] flex md:justify-center justify-start">
+        <div className=" sm:p-8 p-2 md:max-w-[1200px] flex md:justify-center justify-start relative">
+          {/* api based Data */}
+          <div className=" border absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] bg-white p-2 text-black *:my-2">
+            <div> body {body} </div>
+            <div> dress {dress} </div>
+          </div>
+          {/* api based Data */}
           <motion.img
             src="/assets/images/hero1.png"
             className=" max-w-[600px] w-full"
@@ -28,7 +38,8 @@ export default function Custom() {
               return (
                 <div
                   key={i}
-                  className=" mb-2 md:h-[250px] h-[150px] rounded-xl bg-[#ffffff10] hover:bg-[#66C4D930] duration-200 cursor-pointer grid place-content-center"
+                  className=" mb-2 md:h-[250px] h-[150px] rounded-xl bg-[#ffffff10] hover:bg-cyan-500 duration-300 cursor-pointer grid place-content-center"
+                  onClick={() => setBody(i)}
                 >
                   {i + 1}
                 </div>
@@ -40,7 +51,8 @@ export default function Custom() {
               return (
                 <div
                   key={i}
-                  className=" mb-2 md:h-[250px] h-[150px] rounded-xl bg-[#ffffff10] hover:bg-[#66C4D930] duration-200 cursor-pointer grid place-content-center"
+                  className=" mb-2 md:h-[250px] h-[150px] rounded-xl bg-[#ffffff10] hover:bg-cyan-500 duration-300 cursor-pointer grid place-content-center"
+                  onClick={() => setDress(i)}
                 >
                   {" "}
                   {i + 1}
