@@ -2,6 +2,7 @@
 import React from "react";
 import Corner from "@/components/other/corner";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Header() {
   const container = {
@@ -93,12 +94,16 @@ export default function Header() {
             </div>
             <div className=" border-4 text-center border-t-0 rounded-b-3xl relative flex flex-col justify-center sm:pl-6 md:py-[40px] py-4 pl-4 pr-[50px] gap-4">
               <Corner />
-              <p className=" py-4 cursor-pointer bg-zinc-800 rounded-xl uppercase text">
-                TRY ULTRON AI FOR FREE
-              </p>
-              <p className=" border-4 py-4 cursor-pointer rounded-xl text">
-                Join Discord Community
-              </p>
+              <Link href={"https://ultronai.me/"} target="_blank">
+                <p className=" py-4 cursor-pointer bg-zinc-800 rounded-xl uppercase text">
+                  TRY ULTRON AI FOR FREE
+                </p>
+              </Link>
+              <Link href={"https://discord.gg/zmE8XH6A"} target="_blank">
+                <p className=" border-4 py-4 cursor-pointer rounded-xl text">
+                  Join Discord Community
+                </p>
+              </Link>
             </div>
           </div>
         </motion.div>
