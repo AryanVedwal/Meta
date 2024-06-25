@@ -51,11 +51,10 @@ export default function Custom() {
               return (
                 <div
                   key={i}
-                  className=" mb-2 md:h-[250px] h-[150px] rounded-xl bg-[#ffffff10] hover:bg-cyan-500 duration-300 cursor-pointer grid place-content-center"
+                  className=" mb-2 md:h-[250px] h-[150px] rounded-xl bg-[#ffffff10] hover:bg-cyan-500 duration-300 cursor-pointer grid place-content-center md:p-6 p-4"
                   onClick={() => setDress(i)}
                 >
-                  {" "}
-                  {i + 1}
+                  <motion.img src={`/assets/outfit/MO${i + 1}.png`} />
                 </div>
               );
             })}

@@ -103,6 +103,9 @@ export default function Get() {
         <button
           onClick={handleSubmit}
           className="mt-4 p-4 rounded-xl bg-zinc-900 text-white w-full"
+          style={{
+            boxShadow: "inset 0px 0px 3.5px 3.5px #66C4D950  "
+          }}
         >
           Submit
         </button>

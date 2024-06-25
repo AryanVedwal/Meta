@@ -27,7 +27,9 @@ export default function Footer() {
               METABRIX
             </Link>
 
-            <p className="text mt-4">©2023 Metabrix LabsAll rights reserved.</p>
+            <p className="text mt-4">
+              ©2023 Metabrix Labs <br /> All rights reserved.
+            </p>
           </div>
           <div className=" flex flex-col gap-2">
             <h1 className="t-head la">Contact Us</h1>
