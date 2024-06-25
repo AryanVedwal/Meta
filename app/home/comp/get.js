@@ -55,7 +55,7 @@ export default function Get() {
           isSuccess: true,
         });
         setPopupOpen(true);
-        // setTimeout(() => setPopupOpen(false), 3000);
+        setTimeout(() => setPopupOpen(false), 2100);
       } else {
         throw new Error(response.data.message);
       }
