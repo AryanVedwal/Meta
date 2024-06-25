@@ -15,6 +15,33 @@ import {
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+// Loader Component
+const Loader = () => (
+  <span className="inline-flex items-center">
+    <svg
+      className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+    >
+      <circle
+        className="opacity-25"
+        cx="12"
+        cy="12"
+        r="10"
+        stroke="currentColor"
+        strokeWidth="4"
+      ></circle>
+      <path
+        className="opacity-75"
+        fill="currentColor"
+        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+      ></path>
+    </svg>
+    Processing...
+  </span>
+);
+
 export default function Get() {
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
@@ -24,30 +51,27 @@ export default function Get() {
     message: "",
     isSuccess: true,
   });
+  const [isLoading, setIsLoading] = useState(false);
 
+  // Handle email input change
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
     if (error) setError("");
   };
 
+  // Handle form submission
   const handleSubmit = async () => {
     if (!email || !emailRegex.test(email)) {
       setError("Invalid Email");
       return;
     }
 
+    setIsLoading(true);
+
     try {
       const response = await axios.post("https://ultronai.me/api/send-email", {
         email,
       });
-      // const response = await axios.post(
-      //   "https://your-server-url.com/send-email",
-      //   {
-      //     to: "aryanvedwal01@gmail.com",
-      //     subject: "Email from your website",
-      //     message: email,
-      //   }
-      // );
       if (response.data.success) {
         setPopupContent({
           title: "Email sent",
@@ -55,6 +79,7 @@ export default function Get() {
           isSuccess: true,
         });
         setPopupOpen(true);
+        setEmail("");
         setTimeout(() => setPopupOpen(false), 2100);
       } else {
         throw new Error(response.data.message);
@@ -66,6 +91,8 @@ export default function Get() {
         isSuccess: false,
       });
       setPopupOpen(true);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -78,6 +105,7 @@ export default function Get() {
 
   return (
     <div className="xl:p-16 lg:p-12 md:p-8 p-4 sm:flex justify-evenly sm:w-full w-fit sm:mx-0 mx-auto mt-20">
+      {/* Contact Information */}
       <div className="sm:text-start text-center">
         <h3 className="font-bold s-head -ml-1 la">
           Get In <span className="text-lb">Touch</span>
@@ -87,6 +115,8 @@ export default function Get() {
           Studios.
         </p>
       </div>
+
+      {/* Email Input and Submit Button */}
       <div className="sm:mt-0 mt-8 max-w-[320px] w-full">
         <motion.div animate={error ? "shake" : ""} variants={shakeAnimation}>
           <input
@@ -102,15 +132,19 @@ export default function Get() {
         {error && <p className="text-red-600 mt-2">{error}</p>}
         <button
           onClick={handleSubmit}
-          className="mt-4 p-4 rounded-xl bg-zinc-900 text-white w-full"
+          className={`mt-4 p-4 rounded-xl bg-zinc-900 text-white w-full ${
+            isLoading ? "cursor-not-allowed" : ""
+          }`}
           style={{
-            boxShadow: "inset 0px 0px 3.5px 3.5px #66C4D950  "
+            boxShadow: "inset 0px 0px 3.5px 3.5px #66C4D950",
           }}
+          disabled={isLoading}
         >
-          Submit
+          {isLoading ? <Loader /> : "Submit"}
         </button>
       </div>
 
+      {/* Popup Dialog */}
       <Dialog
         className="relative z-10"
         open={popupOpen}
@@ -151,9 +185,7 @@ export default function Get() {
                     {popupContent.title}
                   </DialogTitle>
                   <div className="mt-2">
-                    <p className="text-sm text-white">
-                      {popupContent.message}
-                    </p>
+                    <p className="text-sm text-white">{popupContent.message}</p>
                   </div>
                 </div>
               </div>
