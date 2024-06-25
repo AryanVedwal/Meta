@@ -16,7 +16,7 @@ export default function Footer() {
         }}
         transition={{
           duration: 0.1,
-          // delay: 5.5,
+          delay: 5.5,
         }}
         id="footer"
         className="xl:px-20 lg:px-12 md:px-8 sm:px-4 px-2 py-20 min-h-[80px] bg-gray-900 flex items-center"
