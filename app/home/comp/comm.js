@@ -64,15 +64,13 @@ export default function Comm() {
         Try UltronAI on these platforms
       </h5>
 
-      <div className="mt-10 w-full flex flex-wrap justify-center md:space-x-16 gap-4 mx-auto content-center">
+      <div className="mt-10 w-full flex flex-wrap justify-center md:space-x-4 gap-4 mx-auto content-center">
         {Tools.map((tool, i) => {
           return (
             <Link target="_blank" noopener="true" noreferrer="true" href={tool.link} key={i}>
               <div
-                className="w-full min-w-36 h-auto px-4 py-10 rounded-xl bg-[#2B333D] flex flex-col gap-3 items-center justify-center"
-                style={{
-                  boxShadow: "0.5rem 0.5rem 0.1rem #000",
-                }}
+                className="w-full md:min-w-56 min-w-36 h-auto px-4 py-10 rounded-xl bg-[#2B333D] flex flex-col gap-3 items-center justify-center shadow-lg shadow-black"
+                
               >
                 <motion.img
                   src={`/assets/logos/${tool.name}.svg`}
@@ -95,10 +93,7 @@ export default function Comm() {
           return (
             <div
               key={i}
-              className="max-w-[350px] w-full min-h-[125px] rounded-xl bg-[#2B333D] flex items-center justify-center"
-              style={{
-                boxShadow: "0.5rem 0.5rem 0.1rem #000",
-              }}
+              className="max-w-[350px] w-full min-h-[125px] rounded-xl bg-[#2B333D] flex items-center justify-center shadow-lg shadow-black"
             >
               <motion.img
                 src={`/assets/brands/brand-${i + 1}.svg`}
