@@ -39,41 +39,41 @@ const testimonials = // data/testimonials.json
     "tag": "Polypixerpioneer",
     "name": "Ella",
     "feedback": "“As a designer who has always worked in 2D spaces, Spline is the first 3D design software I was able to feel comfortable with and pick up with ease.”",
-    "image": "/images/test/user.png"
+    "image": User
   },
   {
     "id": "6",
     "tag": "Polypixerpioneer",
     "name": "Fiona",
     "feedback": "“As a designer who has always worked in 2D spaces, Spline is the first 3D design software I was able to feel comfortable with and pick up with ease.”",
-    "image": "/images/test/user.png"
+    "image": User
   },
   {
     "id": "7",
     "name": "George",
     "feedback": "“As a designer who has always worked in 2D spaces, Spline is the first 3D design software I was able to feel comfortable with and pick up with ease.”",
-    "image": "/images/test/user.png"
+    "image": User
   },
   {
     "id": "8",
     "tag": "Polypixerpioneer",
     "name": "Hannah",
     "feedback": "“As a designer who has always worked in 2D spaces, Spline is the first 3D design software I was able to feel comfortable with and pick up with ease.”",
-    "image": "/images/test/user.png"
+    "image": User
   },
   {
     "id": "9",
     "tag": "Polypixerpioneer",
     "name": "Ian",
     "feedback": "“As a designer who has always worked in 2D spaces, Spline is the first 3D design software I was able to feel comfortable with and pick up with ease.”",
-    "image": "/images/test/user.png"
+    "image": User
   },
   {
     "id": "10",
     "tag": "Polypixerpioneer",
     "name": "Julia",
     "feedback": "“As a designer who has always worked in 2D spaces, Spline is the first 3D design software I was able to feel comfortable with and pick up with ease.”",
-    "image": "/images/test/user.png"
+    "image": User
   }
 ]
 

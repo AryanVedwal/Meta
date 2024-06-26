@@ -124,7 +124,7 @@ export default function Get() {
             placeholder="Email Address"
             value={email}
             onChange={handleEmailChange}
-            className={`bg-transparent border-2 outline-none rounded-lg p-4 w-full ${
+            className={`bg-transparent border-2 border-slate-400 outline-none rounded-lg p-4 w-full ${
               error ? "border-red-600" : ""
             }`}
           />
@@ -132,11 +132,11 @@ export default function Get() {
         {error && <p className="text-red-600 mt-2">{error}</p>}
         <button
           onClick={handleSubmit}
-          className={`mt-4 p-4 rounded-xl bg-zinc-900 text-white w-full ${
+          className={`mt-4 p-4 rounded-xl bg-gray-900 text-white w-full ${
             isLoading ? "cursor-not-allowed" : ""
           }`}
           style={{
-            boxShadow: "inset 0px 0px 3.5px 3.5px #66C4D950",
+            boxShadow: "inset cyan 0px 0px 30px -12px",
           }}
           disabled={isLoading}
         >
