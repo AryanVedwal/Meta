@@ -112,17 +112,20 @@ export default function Header() {
             {" "}
             <span className="text-lb">Team</span> Members{" "}
           </div>
-          <div className=" hidden md:grid place-content-center grid-cols-5 gap-2 px-2 max-w-[900px]">
+          <div className=" hidden md:grid place-content-center grid-cols-5 gap-2 px-2 max-w-[800px]">
             {data.map((info, i) => {
               return (
                 <div
                   key={i}
-                  className="h-auto rounded-xl border border-[#00FFFF] cursor-pointer bg-[#ffffff20] grid place-content-center hover:bg-cyan-500 duration-200"
+                  className="h-auto rounded-xl border border-[#00FFFF] cursor-pointer bg-slate-800 grid place-content-center hover:bg-cyan-500 duration-200"
                   onClick={() => setSelected(i)}
+                  style={{
+                    boxShadow: "inset lightgray 0px 0px 30px -12px",
+                  }}
                 >
                   <motion.img
                     src="/assets/images/team.svg"
-                    className="h-[230px]"
+                    className="h-[210px]"
                   />
                 </div>
               );

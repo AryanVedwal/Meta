@@ -54,7 +54,7 @@ export default function Navbar() {
       >
         <div className=" max-w-[2560px] w-full mx-auto flex items-center justify-between">
           <div className=" font-bold sub-head la">
-            <Link href={"/"}>METABRIX</Link>
+            <Link href={"/"}>MetaBrix</Link>
           </div>
 
           <div className="md:flex hidden gap-4 text-[1rem]">
@@ -76,7 +76,10 @@ export default function Navbar() {
           </div>
 
           <div className=" md:hidden block" onClick={() => setIsActive(true)}>
-            Menu
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+</svg>
+
           </div>
         </div>
 
@@ -92,15 +95,18 @@ export default function Navbar() {
           transition={{
             type: "tween",
           }}
-          className="fixed top-0 right-0 h-full w-full bg-db z-50 md:hidden flex flex-col gap-4 text-[1rem] opacity-0"
+          className="fixed top-0 right-10 h-full w-full bg-black z-50 md:hidden flex flex-col gap-4 text-[1rem] opacity-0"
         >
           <div
             className=" cursor-pointer flex items-end min-h-[10%] justify-end pt-4 px-8"
             onClick={() => setIsActive(false)}
           >
-            Close
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+</svg>
+
           </div>
-          <div className=" flex flex-col items-center justify-center gap-4 h-full ">
+          <div className=" flex flex-col items-start justify-center gap-8 h-half pl-16 ">
             {navLinks.map((link, i) => {
               return (
                 <Link
@@ -138,7 +144,7 @@ export default function Navbar() {
       >
         <div className=" max-w-[2560px] w-full mx-auto flex items-center justify-between">
           <div className=" font-bold sub-head la">
-            <Link href={"/"}>METABRIX</Link>
+            <Link href={"/"}>MetaBrix</Link>
           </div>
 
           <div className="md:flex hidden gap-4 text-[1rem]">
